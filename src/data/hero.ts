@@ -1,5 +1,5 @@
 export const heroDetails = {
-    heading: 'Smart, Secure, Simple Financial Management',
-    subheading: 'From effortless budgeting to real-time investment insights, Finwise puts you in control of your money like never before',
-    centerImageSrc: '/images/hero-mockup.webp',
+    heading: 'Auditing Tool for Smart Contracts with AI.',
+    subheading: 'From gas optimization to security analysis of Smart Contracts, Sunya puts you in control with AI like never before.',
+    centerImageSrc: 'https://ethglobal.b-cdn.net/projects/r55oq/screenshots/1b6my/default.jpg',
 }

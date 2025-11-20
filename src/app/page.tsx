@@ -13,22 +13,23 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Hero />
-      <Logos />
+      {/* <Logos /> */}
       <Container>
-        <Benefits />
 
+        <Benefits />
+        {/* 
         <Section
           id="pricing"
           title="Pricing"
           description="Simple, transparent pricing. No surprises."
         >
           <Pricing />
-        </Section>
+        </Section> */}
 
         <Section
           id="testimonials"
-          title="What Our Clients Say"
-          description="Hear from those who have partnered with us."
+          title="What Our Team Says"
+          description="Hear from those who visioned to built this product."
         >
           <Testimonials />
         </Section>
@@ -36,7 +37,7 @@ const HomePage: React.FC = () => {
         <FAQ />
 
         <Stats />
-        
+
         <CTA />
       </Container>
     </>

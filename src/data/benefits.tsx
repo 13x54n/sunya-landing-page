@@ -4,7 +4,7 @@ import { IBenefit } from "@/types"
 
 export const benefits: IBenefit[] = [
     {
-        title: "Smart Budgeting",
+        title: "Gas Optimization",
         description: "Take the guesswork out of managing your money. Our AI-powered budgeting tool adapts to your lifestyle and helps you stay on track.",
         bullets: [
             {
@@ -23,10 +23,10 @@ export const benefits: IBenefit[] = [
                 icon: <FiTrendingUp size={26} />
             }
         ],
-        imageSrc: "/images/mockup-1.webp"
+        imageSrc: "https://images.unsplash.com/photo-1569256174397-819017e58de4?q=80&w=983&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        title: "Seamless Investing",
+        title: "Static Analysis",
         description: "Start building wealth today, no financial degree required. Finwise makes investing accessible and straightforward.",
         bullets: [
             {
@@ -45,10 +45,10 @@ export const benefits: IBenefit[] = [
                 icon: <FiPieChart size={26} />
             }
         ],
-        imageSrc: "/images/mockup-2.webp"
+        imageSrc: "https://images.unsplash.com/photo-1637778352878-f0b46d574a04?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D"
     },
     {
-        title: "Bank-Grade Security",
+        title: "AI Assessment & Audit Report",
         description: "Your financial data deserves the best protection. Rest easy knowing Finwise employs cutting-edge security measures.",
         bullets: [
             {
@@ -67,6 +67,6 @@ export const benefits: IBenefit[] = [
                 icon: <FiShield size={26} />
             }
         ],
-        imageSrc: "/images/mockup-1.webp"
+        imageSrc: "https://images.unsplash.com/photo-1737641624486-7846df8528dc?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
 ]
