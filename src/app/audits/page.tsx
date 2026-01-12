@@ -7,7 +7,7 @@ import { IAudit } from "@/types";
 import Link from "next/link";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { useState, useMemo } from "react";
-import { FaSearch, FaFilter, FaFilePdf, FaExternalLinkAlt, FaShieldAlt, FaClock, FaCheckCircle, FaExclamationTriangle, FaInfoCircle } from "react-icons/fa";
+import { FaSearch, FaFilter, FaFilePdf, FaExternalLinkAlt, FaClock, FaCheckCircle, FaExclamationTriangle, FaInfoCircle } from "react-icons/fa";
 
 const getSeverityIcon = (severity: IAudit['severity']) => {
     switch (severity) {
@@ -184,9 +184,6 @@ export default function AuditsPage() {
                     {filteredAudits.map((audit, i) => (
                         <BentoGridItem
                             key={i}
-                            title={audit.title}
-                            description={audit.description}
-                            severity={audit.severity}
                             header={
                                 <div className="flex flex-col gap-3 mb-4">
                                     {/* Status and Severity Badges */}

@@ -2,14 +2,12 @@
 
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { usePathname } from 'next/navigation';
 import { Transition } from '@headlessui/react';
 import { HiOutlineXMark, HiBars3 } from 'react-icons/hi2';
 
 import { siteDetails } from '@/data/siteDetails';
 
 const Header: React.FC = () => {
-    const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
