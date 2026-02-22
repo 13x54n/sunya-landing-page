@@ -1,9 +1,9 @@
 # Sunya installer for Windows
-# Run: irm https://raw.githubusercontent.com/13x54n/sunya-landing-page/main/package/bin/install.ps1 | iex
+# Run: irm https://raw.githubusercontent.com/13x54n/sunya-v1/main/package/bin/install.ps1 | iex
 
 $ErrorActionPreference = "Stop"
 $Version = if ($env:SUNYA_VERSION) { $env:SUNYA_VERSION } else { "main" }
-$Repo = if ($env:SUNYA_REPO) { $env:SUNYA_REPO } else { "https://raw.githubusercontent.com/13x54n/sunya-landing-page" }
+$Repo = if ($env:SUNYA_REPO) { $env:SUNYA_REPO } else { "https://raw.githubusercontent.com/13x54n/sunya-v1" }
 $BaseUrl = "$Repo/$Version/package/bin"
 $BinDir = if ($env:SUNYA_BIN_DIR) { $env:SUNYA_BIN_DIR } else { "$env:LOCALAPPDATA\sunya\bin" }
 $InstallDir = "$env:LOCALAPPDATA\sunya"

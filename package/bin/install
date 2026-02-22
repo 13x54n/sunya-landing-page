@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Sunya installer - Linux & macOS
-# Run: curl -sSL https://raw.githubusercontent.com/13x54n/sunya-landing-page/main/package/bin/install | sh
+# Run: curl -sSL https://raw.githubusercontent.com/13x54n/sunya-v1/main/package/bin/install | sh
 set -e
 
 SUNYA_VERSION="${SUNYA_VERSION:-main}"
-REPO="${SUNYA_REPO:-https://raw.githubusercontent.com/13x54n/sunya-landing-page}"
+REPO="${SUNYA_REPO:-https://raw.githubusercontent.com/13x54n/sunya-v1}"
 BIN_DIR="${SUNYA_BIN_DIR:-$HOME/.local/bin}"
 SHARE_DIR="${SUNYA_SHARE_DIR:-$HOME/.local/share/sunya}"
 INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

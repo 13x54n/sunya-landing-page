@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Sunya - Static analysis for EVM smart contracts
-# Install: curl -sSL https://raw.githubusercontent.com/13x54n/sunya-landing-page/main/package/bin/install | sh
+# Install: curl -sSL https://raw.githubusercontent.com/13x54n/sunya-v1/main/package/bin/install | sh
 
 set -e
 

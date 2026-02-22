@@ -7,7 +7,7 @@ Static analysis for EVM smart contracts. Install with curl, analyze with one com
 ### Linux & macOS
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/13x54n/sunya-landing-page/main/package/bin/install | sh
+curl -sSL https://raw.githubusercontent.com/13x54n/sunya-v1/main/package/bin/install | sh
 ```
 
 Add `~/.local/bin` to PATH if needed:
@@ -25,7 +25,7 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 ### Windows (PowerShell)
 
 ```powershell
-irm https://raw.githubusercontent.com/13x54n/sunya-landing-page/main/package/bin/install.ps1 | iex
+irm https://raw.githubusercontent.com/13x54n/sunya-v1/main/package/bin/install.ps1 | iex
 ```
 
 **Requirements:** Node.js, Python (for Slither).
@@ -78,6 +78,6 @@ Create `sunya.config.json` in your project root. Use `./src` for Foundry project
 ```bash
 # Foundry project
 forge init my-token && cd my-token
-curl -sSL https://raw.githubusercontent.com/13x54n/sunya-landing-page/main/package/bin/install | sh
+curl -sSL https://raw.githubusercontent.com/13x54n/sunya-v1/main/package/bin/install | sh
 sunya scan
 ```

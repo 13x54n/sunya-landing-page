@@ -8,10 +8,10 @@ Sunya scans your `contracts/` or `src/` directory and runs Slither for vulnerabi
 
 ```bash
 # Linux & macOS
-curl -sSL https://raw.githubusercontent.com/13x54n/sunya-landing-page/main/package/bin/install | sh
+curl -sSL https://raw.githubusercontent.com/13x54n/sunya-v1/main/package/bin/install | sh
 
 # Windows (PowerShell)
-irm https://raw.githubusercontent.com/13x54n/sunya-landing-page/main/package/bin/install.ps1 | iex
+irm https://raw.githubusercontent.com/13x54n/sunya-v1/main/package/bin/install.ps1 | iex
 
 sunya scan
 ```
