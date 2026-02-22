@@ -1,0 +1,48 @@
+export const metadata = {
+  title: "Configuration | Sunya",
+  description: "Configure sunya.config.json for your project",
+}
+
+# Configuration
+
+Sunya is configured via `sunya.config.json` in your project root.
+
+## sunya.config.json
+
+```json
+{
+  "contractsDir": "./contracts",
+  "tools": [
+    {
+      "name": "slither",
+      "command": "slither",
+      "args": [],
+      "parser": "slither"
+    }
+  ],
+  "output": {
+    "format": "table|json",
+    "file": "sunya-report.json"
+  }
+}
+```
+
+## contractsDir
+
+Directory to scan recursively for Solidity files. Default is `./contracts`.
+
+## tools
+
+Array of analysis tools. Each tool has:
+
+- `name` — Display name in output
+- `command` — Executable (e.g. slither, myth)
+- `args` — Base arguments (files are auto-appended)
+- `parser` — Output parser: `slither` or `mythril`
+
+## output
+
+- `format` — `table` for console output, `json` for machine-readable reports
+- `file` — Optional path for JSON output file
+
+**Supported parsers:** slither, mythril

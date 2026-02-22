@@ -1,0 +1,34 @@
+export const metadata = {
+  title: "Example Workflow | Sunya",
+  description: "Example workflow for scanning a Foundry project",
+}
+
+# Example Workflow
+
+Here's a complete workflow for scanning a fresh Foundry project.
+
+## 1. Initialize Foundry project
+
+```bash
+forge init my-token
+cd my-token
+```
+
+## 2. Install analysis tools
+
+```bash
+npm install -g slither-analyzer
+pip install mythril
+```
+
+## 3. Create config
+
+```bash
+echo '{"contractsDir": "./src", "tools": [{"name": "slither", "command": "slither", "parser": "slither"}]}' > sunya.config.json
+```
+
+## 4. Scan everything
+
+```bash
+npx sunya scan
+```

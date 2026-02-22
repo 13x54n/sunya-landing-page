@@ -1,0 +1,21 @@
+export const metadata = {
+  title: "Project Structure | Sunya",
+  description: "Understand how Sunya fits into your project",
+}
+
+# Project Structure
+
+Sunya scans your contracts directory recursively. Here's how your project is typically organized:
+
+```
+your-project/
+├── contracts/              ← Auto-scanned recursively
+├── sunya.config.json       ← Your tool config
+├── package.json
+└── node_modules/.bin/sunya ← Runs from here
+```
+
+## Key files
+
+- `contracts/` — Sunya finds all Solidity files here automatically
+- `sunya.config.json` — Define tools, parsers, and output format

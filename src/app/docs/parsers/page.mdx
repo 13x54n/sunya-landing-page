@@ -1,0 +1,22 @@
+export const metadata = {
+  title: "Available Parsers | Sunya",
+  description: "Slither and Mythril parsers for Sunya",
+}
+
+# Available Parsers
+
+Sunya supports output parsers for popular EVM analysis tools. Each parser converts tool output into a structured format.
+
+| Tool       | Parser   | Output Format   |
+| ---------- | -------- | --------------- |
+| Slither    | `slither`| Console warnings|
+| Mythril    | `mythril`| JSON issues     |
+| [Add yours]| `custom` | [TBD]           |
+
+## Slither
+
+Use parser `slither` for Slither static analysis. Outputs console-style warnings with severity and location.
+
+## Mythril
+
+Use parser `mythril` for Mythril symbolic execution. Outputs structured JSON issues.

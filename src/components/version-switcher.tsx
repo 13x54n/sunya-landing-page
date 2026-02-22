@@ -18,9 +18,11 @@ import {
 export function VersionSwitcher({
   versions,
   defaultVersion,
+  title = "Documentation",
 }: {
   versions: string[]
   defaultVersion: string
+  title?: string
 }) {
   const [selectedVersion, setSelectedVersion] = React.useState(defaultVersion)
 
@@ -37,7 +39,7 @@ export function VersionSwitcher({
                 <GalleryVerticalEnd className="size-4" />
               </div>
               <div className="flex flex-col gap-0.5 leading-none">
-                <span className="font-semibold">Documentation</span>
+                <span className="font-semibold">{title}</span>
                 <span className="">v{selectedVersion}</span>
               </div>
               <ChevronsUpDown className="ml-auto" />

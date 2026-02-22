@@ -1,0 +1,56 @@
+export const metadata = {
+  title: "Quick Start | Sunya",
+  description: "Get started with Sunya in minutes",
+}
+
+# Quick Start
+
+Get up and running with Sunya in two steps: create a config and run a scan.
+
+## 1. Create config
+
+Create `sunya.config.json` in your project root:
+
+```json
+{
+  "contractsDir": "./contracts",
+  "tools": [
+    {
+      "name": "slither",
+      "command": "slither",
+      "args": [],
+      "parser": "slither"
+    },
+    {
+      "name": "mythril",
+      "command": "myth",
+      "args": ["analyze"],
+      "parser": "mythril"
+    }
+  ],
+  "output": {
+    "format": "table"
+  }
+}
+```
+
+## 2. Run scan
+
+```bash
+npx sunya scan
+```
+
+## Output
+
+```
+Found 12 Solidity files in ./contracts
+Running slither on 12 files...
+Running mythril on 12 files...
+
+Tool: slither
+  [medium] State variable visibility (contracts/MyToken.sol:42)
+  [low] Naming convention (contracts/Factory.sol:17)
+
+Tool: mythril
+  No issues found.
+```

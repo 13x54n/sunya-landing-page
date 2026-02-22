@@ -54,6 +54,93 @@ h1, h2, h3, h4, h5, h6 {
   @apply mb-10;
 }
 
+/* MDX Code blocks - reference styling with header, language label, copy button */
+[data-rehype-pretty-code-figure] {
+  @apply relative my-6 overflow-hidden rounded-lg border border-border;
+}
+
+[data-rehype-pretty-code-figure] pre {
+  @apply !m-0 !p-0 overflow-x-auto;
+}
+
+[data-rehype-pretty-code-figure] pre code {
+  @apply block min-w-max py-4 pr-12 pl-4 text-sm leading-7;
+}
+
+[data-rehype-pretty-code-figure] pre [data-line] {
+  @apply px-4;
+}
+
+/* Header bar: language label left, copy button right */
+[data-rehype-pretty-code-header],
+[data-rehype-pretty-code-figure] [data-rehype-pretty-code-title] {
+  @apply flex items-center justify-between gap-2 border-b border-white/10 bg-black/20 px-3 py-2 text-xs font-medium uppercase tracking-wider text-zinc-400;
+}
+
+[data-rehype-pretty-code-figure] > div:first-child {
+  @apply flex items-center justify-between gap-2 border-b border-white/10 bg-black/20 px-3 py-2 text-xs font-medium uppercase tracking-wider text-zinc-400;
+}
+
+/* Copy button - in header, style subtly */
+[data-code-copy] {
+  @apply cursor-pointer rounded px-2 py-1 text-xs text-zinc-400 transition-colors hover:bg-white/5 hover:text-zinc-200;
+}
+
+[data-code-copy].rehype-pretty-copied {
+  @apply text-emerald-400;
+}
+
+/* Docs prose typography - clean, readable, with emphasis */
+.docs-prose {
+  @apply text-foreground;
+}
+
+.docs-prose h1 {
+  @apply mt-0 text-3xl font-bold tracking-tight;
+}
+
+.docs-prose h2 {
+  @apply mt-8 mb-3 text-xl font-semibold;
+}
+
+.docs-prose h3 {
+  @apply mt-6 mb-2 text-lg font-semibold;
+}
+
+.docs-prose p {
+  @apply my-4 leading-7 text-muted-foreground;
+}
+
+.docs-prose strong {
+  @apply font-semibold text-foreground;
+}
+
+.docs-prose ul {
+  @apply my-4 list-disc space-y-2 pl-6;
+}
+
+.docs-prose ol {
+  @apply my-4 list-decimal space-y-2 pl-6;
+}
+
+.docs-prose li {
+  @apply leading-7 text-muted-foreground;
+}
+
+.docs-prose a {
+  @apply text-primary underline-offset-4 hover:underline;
+}
+
+.docs-prose :not(pre) > code {
+  @apply rounded bg-muted px-1.5 py-0.5 font-mono text-sm;
+}
+
+/* Reset prose for code blocks - we style via data attributes */
+.docs-prose pre {
+  @apply !bg-transparent;
+}
+
+
 
 
 @layer base {
