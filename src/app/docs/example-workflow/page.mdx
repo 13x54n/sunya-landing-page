@@ -1,6 +1,14 @@
+import { siteDetails } from "@/data/siteDetails"
+
 export const metadata = {
-  title: "Example Workflow | Sunya",
-  description: "Example workflow for scanning a Foundry project",
+  title: "Example Workflow",
+  description: "Complete workflow: install Sunya, forge init, create sunya.config.json, run sunya scan. Scan Foundry projects for reentrancy and other vulnerabilities.",
+  openGraph: {
+    title: "Example Workflow | Sunya",
+    description: "Example workflow for scanning a Foundry project with Sunya.",
+    url: `${siteDetails.siteUrl}/docs/example-workflow`,
+  },
+  alternates: { canonical: `${siteDetails.siteUrl}/docs/example-workflow` },
 }
 
 # Example Workflow

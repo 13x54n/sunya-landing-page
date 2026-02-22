@@ -1,6 +1,14 @@
+import { siteDetails } from "@/data/siteDetails"
+
 export const metadata = {
-  title: "Quick Start | Sunya",
-  description: "Get started with Sunya in minutes",
+  title: "Quick Start",
+  description: "Get started with Sunya in 3 steps: install via curl, create sunya.config.json, run sunya scan. Scan Foundry and Hardhat projects for vulnerabilities.",
+  openGraph: {
+    title: "Quick Start | Sunya",
+    description: "Get started with Sunya in minutes. Install, configure, and scan your Solidity contracts.",
+    url: `${siteDetails.siteUrl}/docs/quick-start`,
+  },
+  alternates: { canonical: `${siteDetails.siteUrl}/docs/quick-start` },
 }
 
 # Quick Start

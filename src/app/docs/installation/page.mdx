@@ -1,6 +1,14 @@
+import { siteDetails } from "@/data/siteDetails"
+
 export const metadata = {
-  title: "Installation | Sunya",
-  description: "Install Sunya for static analysis of EVM smart contracts",
+  title: "Installation",
+  description: "Install Sunya for EVM smart contract security scanning. One-command curl install for Linux and macOS. PowerShell install for Windows. No npm required.",
+  openGraph: {
+    title: "Installation | Sunya",
+    description: "Install Sunya for static analysis of EVM smart contracts. Works on Linux, macOS, and Windows.",
+    url: `${siteDetails.siteUrl}/docs/installation`,
+  },
+  alternates: { canonical: `${siteDetails.siteUrl}/docs/installation` },
 }
 
 # Installation

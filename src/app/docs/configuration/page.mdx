@@ -1,6 +1,14 @@
+import { siteDetails } from "@/data/siteDetails"
+
 export const metadata = {
-  title: "Configuration | Sunya",
-  description: "Configure sunya.config.json for your project",
+  title: "Configuration",
+  description: "Configure sunya.config.json: contractsDir for Foundry (./src) or Hardhat (./contracts), output format. Environment variables SUNYA_CONFIG and SUNYA_CONTRACTS_DIR.",
+  openGraph: {
+    title: "Configuration | Sunya",
+    description: "Configure sunya.config.json for your smart contract project.",
+    url: `${siteDetails.siteUrl}/docs/configuration`,
+  },
+  alternates: { canonical: `${siteDetails.siteUrl}/docs/configuration` },
 }
 
 # Configuration

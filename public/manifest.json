@@ -1,0 +1,9 @@
+{
+  "name": "Sunya - Static Analysis for EVM Smart Contracts",
+  "short_name": "Sunya",
+  "description": "Scan your Solidity contracts for vulnerabilities with Slither. One-command install. Linux, macOS, Windows.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a"
+}

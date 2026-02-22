@@ -1,6 +1,14 @@
+import { siteDetails } from "@/data/siteDetails"
+
 export const metadata = {
-  title: "Contributing | Sunya",
-  description: "How to contribute to Sunya",
+  title: "Contributing",
+  description: "Contribute to Sunya: fork, edit bin/sunya.js or bin/install, test with Foundry project. Cross-platform development for Linux, macOS, Windows.",
+  openGraph: {
+    title: "Contributing | Sunya",
+    description: "How to contribute to Sunya smart contract security tool.",
+    url: `${siteDetails.siteUrl}/docs/contributing`,
+  },
+  alternates: { canonical: `${siteDetails.siteUrl}/docs/contributing` },
 }
 
 # Contributing

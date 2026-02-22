@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { AppSidebar } from "@/components/app-sidebar"
 import { DocsBreadcrumb } from "@/components/docs-breadcrumb"
 import { Separator } from "@/components/ui/separator"
@@ -6,6 +7,13 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { siteDetails } from "@/data/siteDetails"
+
+export const metadata: Metadata = {
+  title: "Documentation",
+  description: "Sunya documentation: installation, configuration, Slither integration. Scan EVM smart contracts for vulnerabilities.",
+  alternates: { canonical: `${siteDetails.siteUrl}/docs` },
+}
 
 export default function DocsLayout({
   children,

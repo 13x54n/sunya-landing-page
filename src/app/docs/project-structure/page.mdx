@@ -1,6 +1,14 @@
+import { siteDetails } from "@/data/siteDetails"
+
 export const metadata = {
-  title: "Project Structure | Sunya",
-  description: "Understand how Sunya fits into your project",
+  title: "Project Structure",
+  description: "How Sunya fits into your Solidity project. Use src/ for Foundry, contracts/ for Hardhat. Optional sunya.config.json for custom paths.",
+  openGraph: {
+    title: "Project Structure | Sunya",
+    description: "Understand how Sunya fits into your EVM smart contract project.",
+    url: `${siteDetails.siteUrl}/docs/project-structure`,
+  },
+  alternates: { canonical: `${siteDetails.siteUrl}/docs/project-structure` },
 }
 
 # Project Structure

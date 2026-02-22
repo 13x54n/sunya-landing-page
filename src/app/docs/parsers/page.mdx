@@ -1,6 +1,14 @@
+import { siteDetails } from "@/data/siteDetails"
+
 export const metadata = {
-  title: "Slither | Sunya",
-  description: "Slither static analysis for Sunya",
+  title: "Slither",
+  description: "Sunya uses Slither for static analysis. Detects reentrancy, unchecked calls, naming issues. 100+ detectors. Integrates with Foundry forge build.",
+  openGraph: {
+    title: "Slither | Sunya",
+    description: "Slither static analysis for EVM smart contracts. Vulnerability detection with Sunya.",
+    url: `${siteDetails.siteUrl}/docs/parsers`,
+  },
+  alternates: { canonical: `${siteDetails.siteUrl}/docs/parsers` },
 }
 
 # Slither
