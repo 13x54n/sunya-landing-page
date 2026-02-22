@@ -1,0 +1,19 @@
+{
+    "contractsDir": "./contracts", 
+    "tools": [
+      {
+        "name": "slither",
+        "command": "slither",
+        "args": [],  
+        "parser": "slither"
+      },
+      {
+        "name": "mythril", 
+        "command": "myth",
+        "args": ["analyze"],  
+        "parser": "mythril",
+        "fileArgIndex": 1
+      }
+    ]
+  }
+  

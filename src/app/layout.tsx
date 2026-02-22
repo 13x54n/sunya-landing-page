@@ -3,8 +3,6 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { Source_Sans_3, Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next"
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { siteDetails } from '@/data/siteDetails';
 
 
@@ -44,17 +42,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
         className={`${manrope.className} ${sourceSans.className} antialiased`}
       >
-        {siteDetails.googleAnalyticsId && <GoogleAnalytics gaId={siteDetails.googleAnalyticsId} />}
-        <Header />
         <main>
           {children}
         </main>
-        <Footer />
         <Analytics />
+        {siteDetails.googleAnalyticsId && <GoogleAnalytics gaId={siteDetails.googleAnalyticsId} />}
       </body>
     </html>
   );
