@@ -1,5 +1,6 @@
-# Sunya installer for Windows
+# Sunya installer for Windows (PowerShell)
 # Run: irm https://raw.githubusercontent.com/13x54n/sunya-v1/main/package/bin/install.ps1 | iex
+# CMD: curl -sL -o %TEMP%\sunya-install.cmd https://raw.githubusercontent.com/13x54n/sunya-v1/main/package/bin/install.cmd && %TEMP%\sunya-install.cmd
 
 $ErrorActionPreference = "Stop"
 $Version = if ($env:SUNYA_VERSION) { $env:SUNYA_VERSION } else { "main" }

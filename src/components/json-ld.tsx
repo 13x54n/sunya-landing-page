@@ -22,7 +22,7 @@ export function JsonLd() {
       "Static analysis for Solidity smart contracts",
       "Slither integration",
       "Cross-platform (Linux, macOS, Windows)",
-      "Curl install in one command",
+      "One-command install (curl, PowerShell, CMD)",
       "Foundry and Hardhat support",
     ],
   };

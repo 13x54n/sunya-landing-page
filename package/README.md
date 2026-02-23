@@ -22,13 +22,19 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 
 **Requirements:** Bash, Node.js (recommended) or Python. Slither is installed automatically.
 
-### Windows (PowerShell)
+### Windows
 
+**PowerShell:**
 ```powershell
 irm https://raw.githubusercontent.com/13x54n/sunya-v1/main/package/bin/install.ps1 | iex
 ```
 
-**Requirements:** Node.js, Python (for Slither).
+**CMD:**
+```cmd
+curl -sL -o %TEMP%\sunya-install.cmd https://raw.githubusercontent.com/13x54n/sunya-v1/main/package/bin/install.cmd && %TEMP%\sunya-install.cmd
+```
+
+**Requirements:** Node.js, Python (for Slither). Restart terminal after install for PATH changes.
 
 ## Usage
 
@@ -71,7 +77,7 @@ Create `sunya.config.json` in your project root. Use `./src` for Foundry project
 | -------- | ------------ |
 | Linux    | Bash, Node.js (recommended) or Python, Python 3 (for Slither) |
 | macOS    | Bash, Node.js (recommended) or Python, Python 3 (for Slither) |
-| Windows  | Node.js, Python (for Slither) |
+| Windows  | Node.js, Python (for Slither). Restart terminal after install for PATH. |
 
 ## Example
 
