@@ -55,7 +55,7 @@ if (!(Get-Command python -ErrorAction SilentlyContinue) -and !(Get-Command pytho
 
 $pip = if (Get-Command pip -ErrorAction SilentlyContinue) { "pip" } else { "pip3" }
 try {
-  & $pip install slither-analyzer 2>$null
+  & python3 -m pip install slither-analyzer 2>$null
 } catch {
   Write-Host "Could not install Slither automatically. Run: pip install slither-analyzer"
 }
