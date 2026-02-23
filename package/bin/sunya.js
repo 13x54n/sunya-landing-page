@@ -50,7 +50,7 @@ function runAsync(cmd, args, opts = {}) {
   return new Promise((resolve, reject) => {
     const p = spawn(cmd, args, {
       stdio: opts.silent ? "pipe" : "inherit",
-      shell: isWindows,
+      shell: opts.shell ?? false,
       ...opts,
     });
     p.on("close", (code) => (code === 0 ? resolve() : reject(new Error(`Exit ${code}`))));
@@ -115,6 +115,8 @@ async function runInstall() {
   const attempts = [
     ["uv", ["pip", "install", "--system", "slither-analyzer"]],
     ["uv", ["pip", "install", "slither-analyzer"]],
+    ["python", ["-m", "pip", "install", "slither-analyzer"]],
+    ["python3", ["-m", "pip", "install", "slither-analyzer"]],
     ["pip3", ["install", "slither-analyzer"]],
     ["pip", ["install", "slither-analyzer"]],
   ];
@@ -169,7 +171,7 @@ async function runScan(dir) {
   }
 
   console.log("Running Slither...");
-  const p = spawn(slitherCmd, [target], { stdio: "inherit", shell: isWindows });
+  const p = spawn(slitherCmd, [target], { stdio: "inherit", shell: false });
   await new Promise((res) => p.on("close", res));
   console.log("\nScan complete.");
 }

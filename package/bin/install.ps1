@@ -53,11 +53,27 @@ if (!(Get-Command python -ErrorAction SilentlyContinue) -and !(Get-Command pytho
   exit 1
 }
 
-$pip = if (Get-Command pip -ErrorAction SilentlyContinue) { "pip" } else { "pip3" }
-try {
-  & python3 -m pip install slither-analyzer 2>$null
-} catch {
-  Write-Host "Could not install Slither automatically. Run: pip install slither-analyzer"
+$slitherInstalled = $false
+foreach ($cmd in @("python", "python3")) {
+  if (Get-Command $cmd -ErrorAction SilentlyContinue) {
+    try {
+      & $cmd -m pip install slither-analyzer 2>$null
+      if ($LASTEXITCODE -eq 0) { $slitherInstalled = $true; break }
+    } catch {}
+  }
+}
+if (-not $slitherInstalled) {
+  foreach ($cmd in @("pip3", "pip")) {
+    if (Get-Command $cmd -ErrorAction SilentlyContinue) {
+      try {
+        & $cmd install slither-analyzer 2>$null
+        if ($LASTEXITCODE -eq 0) { $slitherInstalled = $true; break }
+      } catch {}
+    }
+  }
+}
+if (-not $slitherInstalled) {
+  Write-Host "Could not install Slither automatically. Run: python -m pip install slither-analyzer"
 }
 
 Write-Host ""
