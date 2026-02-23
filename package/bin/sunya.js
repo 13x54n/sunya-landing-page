@@ -53,6 +53,7 @@ function runAsync(cmd, args, opts = {}) {
       shell: opts.shell ?? false,
       ...opts,
     });
+    p.on("error", reject);
     p.on("close", (code) => (code === 0 ? resolve() : reject(new Error(`Exit ${code}`))));
   });
 }
